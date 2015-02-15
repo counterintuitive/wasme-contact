@@ -4,6 +4,16 @@ body{
 	font-family: 'Muli', sans-serif;
 	font-weight: 300;
 }
+.background{
+	background: url("pics/background.jpg") no-repeat #eee;
+	position: fixed;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: 100%;
+	.blur(6px);
+}
 
 h1{
 	font-family: 'Muli', sans-serif;
@@ -25,18 +35,19 @@ a{
 }
 
 #contact-us{
-	margin-top: 100px;
+	margin-top: 50px;
 	display: inline-block;
 }
 
 .logo-container{
 	text-align: center;
 	.logo{
-		width: 200px;
+		width: 130px;
 		height: auto;
-		margin-top: 20px;
-		margin-bottom: 50px;
+		margin-top: 50px;
+		margin-bottom: 30px;
 	}
+	
 }
 .title{
 	text-align: center;
@@ -44,4 +55,12 @@ a{
 
 .app-store-link{
 	width:200px;
+}
+
+
+/* MIXINS */
+
+.blur(@value){
+    filter: blur(@value);
+    -webkit-filter: blur(@value);
 }
